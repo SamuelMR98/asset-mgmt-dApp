@@ -1,0 +1,164 @@
+{
+    "info": {
+      "name": "AssetMgmt-DApp",
+      "_postman_id": "f8c4f2ea-2a6e-45d8-a89a-e4bf7ec30e2c",
+      "description": "Collection for testing the Asset Management DApp",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Get Users",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "{{baseUrl}}/api/users",
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "path": [
+              "api",
+              "users"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Create User",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"username\": \"charlie\",\n    \"password\": \"password123\",\n    \"role\": \"user\"\n}"
+          },
+          "url": {
+            "raw": "{{baseUrl}}/api/users",
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "path": [
+              "api",
+              "users"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Get Assets",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "{{baseUrl}}/api/assets",
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "path": [
+              "api",
+              "assets"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Create Asset",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"name\": \"Digital Gold\",\n    \"type\": \"Token\",\n    \"owner_id\": 1\n}"
+          },
+          "url": {
+            "raw": "{{baseUrl}}/api/assets",
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "path": [
+              "api",
+              "assets"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Get Transactions",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "{{baseUrl}}/api/transactions",
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "path": [
+              "api",
+              "transactions"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Create Transaction",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"asset_id\": 1,\n    \"from_user_id\": 1,\n    \"to_user_id\": 2,\n    \"amount\": 15.5\n}"
+          },
+          "url": {
+            "raw": "{{baseUrl}}/api/transactions",
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "path": [
+              "api",
+              "transactions"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Get Market Data",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "{{baseUrl}}/api/marketdata",
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "path": [
+              "api",
+              "marketdata"
+            ]
+          }
+        },
+        "response": []
+      }
+    ]
+  }
+  
